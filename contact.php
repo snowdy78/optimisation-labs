@@ -15,7 +15,7 @@
             }
     }
     $contact = new ContactPage();
-    $contact -> filename = "view/contact.html";
+    $contact->filename = "view/contact.html";
     //Вызов метода родительского класса Model
-    $contact -> Display();
+    $contact->display();
 ?>
