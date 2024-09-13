@@ -1,0 +1,31 @@
+h1 {
+    color: darkred;
+    font-size: 24pt;
+    text-align: center;
+    font-family: arial, sans-serif;
+}
+.menu {
+    color: darkred;
+    font-size: 12pt;
+    text-align: center;
+    font-family: arial, sans-serif;
+    font-weight: bold;
+}
+td {
+    background: palegoldenrod;
+}
+p {
+    color: black;
+    font-size: 12pt;
+    text-align: justify;
+    font-family: arial, sans-serif;
+}
+p.foot {
+    color: black;
+    font-size: 12pt;
+    text-align: justify;
+    font-family: arial, sans-serif;
+}
+a:link,a:visited,a:active {
+    color: darkred;
+}
