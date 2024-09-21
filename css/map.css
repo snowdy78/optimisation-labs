@@ -21,7 +21,6 @@ a:hover {
 .holiday {
     display: inline-block;
     position: relative;
-    left: 20%; /*Сдвигаем блок влево*/
     overflow: hidden;
     font-size: 16px;
 }
@@ -42,8 +41,6 @@ dt {
 dd {
     width: 70%;/*Ширина правой части - Ссылки*/
     float: right;
-    margin-left: 0;
-    margin-bottom: .3125em;
     /*border: 1px solid #BECFC7;
     border-left: none;*/
 }

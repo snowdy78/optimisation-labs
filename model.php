@@ -44,8 +44,7 @@
         }
         public function displayMenu($buttons)
         {
-            echo "<table width=\"100%\" bgcolor=\"white\"" .
-            "cellpadding=\"4\" cellspacing=\"4\">\n";
+            echo "<table width=\"100%\" bgcolor=\"white\""."cellpadding=\"4\" cellspacing=\"4\">\n";
             echo "<tr>\n";
             // Вычисление значения кнопки 100/количество
             $width = 100/count($buttons);
@@ -79,15 +78,14 @@
             }
             else
             { //Активный (выделен пользователем) - ставим галочку и убираем ссылку!
-                echo "<td width =\"".$width."%\">&#9989;" .
-                "<span class=\"menu\">".$name."</span></td>";
+                echo "<td width =\"".$width."%\">&#9989;"."<span class=\"menu\">".$name."</span></td>";
             }
         }
         public function displayContent($fil) { //Подгружаем контент
             $filename = $fil;
             //Читаем файл
             $myfile = fopen($filename, "r") or die("Не удается открыть файл!");
-            $content = fread($myfile,filesize($filename));
+            $content = fread($myfile, filesize($filename));
             fclose($myfile);
             echo $this->content=$content; //Публикуем контекст -> Атрибут класса = Значение
         }
