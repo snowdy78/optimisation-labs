@@ -22,5 +22,4 @@
     $map->filename = "view/sitemap.html";
     //Вызов метода родительского класса Model
     $map->display();
-
 ?>
