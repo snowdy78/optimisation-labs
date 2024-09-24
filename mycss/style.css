@@ -1,0 +1,47 @@
+th {
+    font-weight: 400;
+}
+@media (max-width: 48em) {
+    table .btn, h1, h2, h3, h4, h5, tr {
+        font-size: 0.75rem; /*FireFox и др.*/
+        font-size: 3.5vw; /*Chrome, Safari*/
+    }
+}
+@media (width > 500px) {
+    .xs {
+        color: red
+    }
+    .sm, .md, .ld {
+        color: black;
+    }
+}
+
+@media (width > 1000px) {
+    .sm {
+        color: red
+    }
+
+    .xs, .md, .ld {
+        color: black;
+    }
+}
+
+@media (width > 1200px) {
+    .md {
+        color: red
+    }
+    
+    .xs, .sm, .ld {
+        color: black;
+    }
+}
+
+@media (width > 1500px) {
+    .ld {
+        color: red
+    }
+    
+    .xs, .md, .sm {
+        color: black;
+    }
+}
