@@ -4,6 +4,7 @@ h1 {
     text-align: center;
     font-family: arial, sans-serif;
 }
+
 .menu {
     color: darkred;
     font-size: 12pt;
@@ -11,21 +12,51 @@ h1 {
     font-family: arial, sans-serif;
     font-weight: bold;
 }
+
 td {
     background: palegoldenrod;
 }
+
 p {
     color: black;
     font-size: 12pt;
     text-align: justify;
     font-family: arial, sans-serif;
 }
+
 p.foot {
     color: black;
     font-size: 12pt;
     text-align: justify;
     font-family: arial, sans-serif;
 }
-a:link,a:visited,a:active {
+
+a:link,
+a:visited,
+a:active {
     color: darkred;
+}
+img {
+    max-width: 800px;
+}
+/*Слайдер*/
+.slides {
+    display: inline-block;
+    position: relative;
+    left: 20%;
+    width: 800px;
+    height: 480px;
+}
+
+.index-img {
+    display: none;
+}
+
+#block {
+    display: block;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
 }
