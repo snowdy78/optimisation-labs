@@ -1,0 +1,91 @@
+.bg {
+    background-image: url("../img/bg.png");
+    background-size: cover;
+    /*сохранение пропорций*/
+}
+
+section#intro-header .wrap-headline {
+    position: relative;
+    /*позиционирование фона*/
+    padding-top: 20%;
+    padding-bottom: 20%;
+}
+
+section#intro-header h1,
+section#intro-header h2 {
+    color: #FFF;
+}
+
+section#intro-header h2 {
+    font-size: 1.5rem;
+}
+
+hr {
+    /* линия по центру */
+    margin-left: auto;
+    margin-right: auto;
+    width: 10%;
+}
+
+section#intro-header .btn-default {
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+}
+
+/* Строка 3 */
+section#about img {
+    /*Отступы для img*/
+    Margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+section#about h3 {
+    /*Отступы для h3*/
+    margin-top: 3rem;
+}
+
+section#pricing {
+    /* текст по центру */
+    text-align: center;
+}
+
+/* Раздел 6 Подвал */
+footer {
+    background-color: #191919;
+    color: #ADADAD;
+    margin-top: 3em;
+}
+
+footer h5,
+footer img {
+    margin-top: 5em;
+    font-weight: bold;
+}
+
+footer address {
+    margin-top: 5em;
+    margin-bottom: 5em;
+    color: #5A5A5A;
+}
+
+footer ul {
+    margin-bottom: 5em;
+}
+
+footer address strong {
+    color: #ADADAD;
+    display: block;
+    padding-bottom: 0.62em;
+}
+
+footer a {
+    text-decoration: none !important;
+    /*Ссылки без подчеркивания*/
+    font-weight: 300;
+    color: #5A5A5A;
+}
+
+footer a:hover {
+    text-decoration: none;
+    color: #FFF;
+}
