@@ -7,41 +7,26 @@ th {
         font-size: 3.5vw; /*Chrome, Safari*/
     }
 }
-@media (width > 500px) {
+@media (width > 500px) and (width < 1000px) {
     .xs {
         color: red
     }
-    .sm, .md, .ld {
-        color: black;
-    }
 }
 
-@media (width > 1000px) {
+@media (width > 1000px) and (width < 1200px) {
     .sm {
         color: red
     }
-
-    .xs, .md, .ld {
-        color: black;
-    }
 }
 
-@media (width > 1200px) {
+@media (width > 1200px) and (width < 1500px) {
     .md {
         color: red
-    }
-    
-    .xs, .sm, .ld {
-        color: black;
     }
 }
 
 @media (width > 1500px) {
     .ld {
         color: red
-    }
-    
-    .xs, .md, .sm {
-        color: black;
     }
 }
