@@ -88,3 +88,6 @@ footer a:hover {
 .color-revert {
     filter:invert(50%);
 }
+.hidden-element {
+    display: none;
+}
