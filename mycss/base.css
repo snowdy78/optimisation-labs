@@ -16,10 +16,6 @@ section#intro-header h2 {
     color: #FFF;
 }
 
-section#intro-header h2 {
-    font-size: 1.5rem;
-}
-
 hr {
     /* линия по центру */
     margin-left: auto;
@@ -88,4 +84,7 @@ footer a {
 footer a:hover {
     text-decoration: none;
     color: #FFF;
+}
+.color-revert {
+    filter:invert(50%);
 }
