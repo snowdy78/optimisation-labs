@@ -9,6 +9,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="mycss/base.css" rel="stylesheet">
     <script src="myjs/main.js"></script>
+    <script src="myjs/ajax.js"></script>
     <title>Сайт компании «Провайдер»</title>
 </head>
 
@@ -21,10 +22,10 @@
                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
                     <div class="container-fluid">
                         <a class="navbar-brand pull-left" href="#">Компания "Провайдер"</a>
-                        <ul class="navbar-nav pull-right">
+                        <ul id="ul-link" class="navbar-nav pull-right">
                             <li class="nav-item"><a class="nav-link" href="#features">Услуги</a></li>
                             <li class="nav-item"><a class="nav-link" href="#pricing">Прейскурант</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#contact">Контакты</a></li>
+                            <li class="nav-item"><a class="nav-link" href="html/contact.html">Контакты</a></li>
                             <li class="nav-item"><a class="nav-link" href="#about">О нас</a></li>
                         </ul>
                     </div> <!-- end container-fluid -->
@@ -68,85 +69,6 @@
             </div> <!-- end row -->
         </div> <!-- end container -->
     </section>
-    <section id="about">
-        <div class="container">
-            <!-- строка 3 -->
-            <div class="row">
-                <div class="col-sm-6"> <!-- Столбец 1 -->
-                    <img src="img/services-1.png" class="img-responsive img-fluid">
-                </div>
-                <div class="col-sm-6"> <!-- Столбец 2 -->
-                    <h3>Что такое провайдер</h3>
-                    <p>Провайдер ― это компания...
-                    </p>
-                </div>
-            </div> <!-- end row -->
-            <hr>
-            <!-- строка 4 -->
-            <div class="row">
-                <div class="col-sm-6">
-                    <h3>Как работает провайдер</h3>
-                    <p>Провайдер дает доступ в интернет.
-                    </p>
-                </div>
-                <div class="col-sm-6">
-                    <img src="img/services-2.png" class="img-responsive img-fluid ">
-                </div>
-            </div> <!-- end row -->
-        </div> <!-- end container -->
-    </section>
-    <!-- Раздел 4 -->
-    <section id="features">
-        <div class="container">
-            <!-- строка 5 -->
-            <div class="row">
-                <div class="col-sm-12">
-                    <h3 class="text-center">Раздел свойств</h3>
-                    <p class="text-center">Описание свойств</p>
-                </div>
-            </div> <!-- end row -->
-            <!-- строка 6 -->
-            <div class="row">
-                <div class="col-sm-2 col-md-4">
-                    <div class="feature"> Описание 1</div>
-                </div>
-                <div class="col-sm-2 col-md-4">
-                    <div class="feature"> Описание 2</div>
-                </div>
-                <div class="col-sm-2 col-md-4">
-                    <div class="feature"> Описание 3</div>
-                </div>
-                <div class="col-sm-2 col-md-4">
-                    <div class="feature"> Описание 4</div>
-                </div>
-                <div class="col-sm-2 col-md-4">
-                    <div class="feature"> Описание 5</div>
-                </div>
-                <div class="col-sm-2 col-md-4">
-                    <div class="feature"> Описание 6</div>
-                </div>
-            </div> <!-- end row -->
-        </div> <!-- end container -->
-    </section>
-    <section id="pricing">
-        <div class="container">
-            <h4>Подпишитесь на рассылку, чтобы получать свежую информацию.</h4>
-            <form class="row justify-content-center gy-2" method="post" action="html/contact.html">
-                <div class="col-auto">
-                    <input type="form-control" placeholder="ur name..." />
-                </div>
-                <div class="col-auto">
-                    <input type="form-control" placeholder="ur mail..." />
-                </div>
-                <div class="col-auto">
-                    <button type="submit" class="btn btn-primary">
-                        Подпишись сейчас!
-                    </button>
-                </div>
-            </form>
-        </div>
-        <hr>
-    </section>
     <footer class="row">
         <div class="container">
             <div class="row">
@@ -187,7 +109,23 @@
             </div> <!-- end row -->
         </div> <!-- end container -->
     </footer>
-    
+    <script>
+        window.onload = () => {
+            linkcontent('html/main.html');
+        };
+        let link = document.getElementById('ul-link');
+        link.addEventListener('click', (event) => {
+            if (event.target.nodeName.toUpperCase() !== 'A') {
+                return;
+            }
+            let node = event.target;
+            if (node.getAttribute('href') === '#contact') {
+                linkcontent("html/contact.html");
+            } else {
+                linkcontent("html/main.html");
+            }
+        });
+    </script>
     <!-- Bootstrap JS -->
     <script src="js/bootstrap.min.js"></script>
 </body>

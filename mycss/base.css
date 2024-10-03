@@ -91,3 +91,6 @@ footer a:hover {
 .hidden-element {
     display: none;
 }
+img {
+    min-width: 200px;
+}
