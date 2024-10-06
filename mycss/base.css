@@ -94,3 +94,6 @@ footer a:hover {
 img {
     min-width: 200px;
 }
+#employee-data {
+    word-wrap: break-word;
+}

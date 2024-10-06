@@ -25,7 +25,7 @@
                         <ul id="ul-link" class="navbar-nav pull-right">
                             <li class="nav-item"><a class="nav-link" href="#features">Услуги</a></li>
                             <li class="nav-item"><a class="nav-link" href="#pricing">Прейскурант</a></li>
-                            <li class="nav-item"><a class="nav-link" href="html/contact.html">Контакты</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#contact">Контакты</a></li>
                             <li class="nav-item"><a class="nav-link" href="#about">О нас</a></li>
                         </ul>
                     </div> <!-- end container-fluid -->
@@ -34,6 +34,8 @@
         </div> <!-- end container -->
         
     </header>
+    <div id="nav-tab-content"></div>
+    <div id="loading" class="hidden-element">Loading...</div>
     <section id="intro-header">
         <div class="container bg">
             <!-- строка 2 -->
@@ -72,8 +74,8 @@
     <footer class="row">
         <div class="container">
             <div class="row">
-                <div class="col-sm-2">
-                    <img src="img/logo.svg" width="250" height="250" class="color-revert img-responsive img-fluid">
+                <div class="col-2">
+                    <img src="img/logo.svg" class="color-revert img-responsive img-fluid">
                 </div>
                 <div class="col-sm-2">
                     <h5>О компании</h5>
@@ -115,14 +117,21 @@
         };
         let link = document.getElementById('ul-link');
         link.addEventListener('click', (event) => {
-            if (event.target.nodeName.toUpperCase() !== 'A') {
+            if (!event.target || !event.target.getAttribute('href')) {
                 return;
             }
+            // костыльненько, но за то быстро написать
+            function loadContent(content_name) {
+                linkcontent(`html/${content_name}.html`, '#nav-tab-content');
+            }
             let node = event.target;
-            if (node.getAttribute('href') === '#contact') {
-                linkcontent("html/contact.html");
+            let href = node.getAttribute('href');
+            if (href === '#contact') {
+                loadContent('contact');
+            } else if (href === '#about') {
+                loadContent("about5");
             } else {
-                linkcontent("html/main.html");
+                loadContent("main");
             }
         });
     </script>
