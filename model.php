@@ -23,6 +23,8 @@
             }
             public function displayTitle()
             {
+                require("admin/login/session.php");
+                start_session();
                 echo "<!DOCTYPE html><html>\n<head>\n<meta charset='UTF-8'>\n";
                 echo "<title>".$this->title."</title>";
             }
@@ -41,7 +43,7 @@
             }
         public function displayHeader()
         {
-            require('view/header.html'); //Открываем файл в любом случае
+            require('view/header.php'); //Открываем файл в любом случае
         }
         public function displayMenu($buttons)
         {
@@ -91,7 +93,7 @@
             echo $this->content=$content; //Публикуем контекст -> Атрибут класса = Значение
         }
         public function displayFooter() {
-            require('view/footer.html'); //Открываем файл в любом случае
+            require('view/footer.php'); //Открываем файл в любом случае
         }
     }
 ?>

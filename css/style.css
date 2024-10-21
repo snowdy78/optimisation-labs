@@ -36,9 +36,11 @@ a:visited,
 a:active {
     color: darkred;
 }
+
 img {
     max-width: 800px;
 }
+
 /*Слайдер*/
 .slides {
     display: inline-block;
@@ -59,4 +61,51 @@ img {
 .btn {
     display: flex;
     justify-content: center;
+}
+
+.sign-in {
+}
+
+.sign-out {
+    transform: scaleX(-100%);
+    transform-origin: center center;
+}
+
+/*Кнопки Войти/Выйти*/
+.img_in {
+    margin-top: 150px;
+    /*опускаем картинку входа*/
+    cursor: pointer;
+    /*Указатель*/
+}
+
+/*Модальное окно авторизации*/
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+}
+
+.modal .modal_content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+    z-index: 99999;
+}
+
+.modal .modal_content .close_modal_window {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
 }
